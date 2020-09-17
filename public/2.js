@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_LoginForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/LoginForm */ "./resources/js/components/LoginForm.jsx");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Alert */ "./resources/js/components/Alert.jsx");
+/* harmony import */ var _helpers_alert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helpers/alert */ "./resources/js/helpers/alert.js");
 
 
 
@@ -58,10 +58,7 @@ var Login = function Login(_ref) {
     title: "Blog App - Login"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container container--center"
-  }, Object.keys(errors).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Alert__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    type: "error",
-    content: Object.values(errors)
-  }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, Object(_helpers_alert__WEBPACK_IMPORTED_MODULE_4__["showAlert"])(errors, "error"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "headline"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["InertiaLink"], {
     className: "switcher switcher--active",
@@ -280,6 +277,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ERROR", function() { return ERROR; });
 var SUCCESS = "success";
 var ERROR = "error";
+
+/***/ }),
+
+/***/ "./resources/js/helpers/alert.js":
+/*!***************************************!*\
+  !*** ./resources/js/helpers/alert.js ***!
+  \***************************************/
+/*! exports provided: showAlert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showAlert", function() { return showAlert; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Alert */ "./resources/js/components/Alert.jsx");
+
+
+var showAlert = function showAlert(errors, alertType) {
+  return Object.keys(errors).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Alert__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    type: alertType,
+    content: Object.values(errors)
+  }) : null;
+};
 
 /***/ })
 

@@ -21,13 +21,13 @@ class LoginController extends Controller
 
       $validated = $request->validated();
 
-      if( Auth::attempt(['email' => $validated['email'], 'password' => $validated['password']])) {
+      if( Auth::attempt($validated) ) {
          
          return redirect('/')->with('message', 'You logged in successfully');
 
-      } else {
+      } 
+
          return redirect('login')->withErrors('Uncorrect Login or Password.');
-      }
       
    }
 }
