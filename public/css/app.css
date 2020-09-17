@@ -519,3 +519,22 @@ html {
   border-bottom: 1px solid #3772ff;
 }
 
+.alert {
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.alert--success {
+  background-color: #0cc851;
+}
+
+.alert--error {
+  background-color: #ff4444;
+}
+
+.alert__single {
+  padding: 10px 0;
+}
+

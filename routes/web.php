@@ -19,4 +19,6 @@ Route::get('/', [FrontpageController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
 
+Route::post('/login', [LoginController::class, 'store']);
+
 Route::get('/register', [RegisterController::class, 'index']);

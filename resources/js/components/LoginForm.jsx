@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Inertia } from "@inertiajs/inertia";
 const LoginForm = () => {
     const [values, setValues] = useState({
         email: "",
@@ -16,6 +17,11 @@ const LoginForm = () => {
                 [currentField]: value
             };
         });
+    };
+
+    const handleSubmit = ev => {
+        ev.preventDefault();
+        Inertia.post("/login", values);
     };
     return (
         <form className="form" action="">
@@ -54,7 +60,9 @@ const LoginForm = () => {
                 />
             </div>
             <div className="form__input-container">
-                <button className="form__btn">Log in</button>
+                <button onClick={handleSubmit} className="form__btn">
+                    Log in
+                </button>
             </div>
         </form>
     );

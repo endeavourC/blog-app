@@ -1,0 +1,15 @@
+.alert {
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    margin: 15px 0;
+    &--success {
+        background-color: #0cc851;
+    }
+    &--error {
+        background-color: #ff4444;
+    }
+    &__single {
+        padding: 10px 0;
+    }
+}
