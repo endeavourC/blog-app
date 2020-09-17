@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 25px 0;
+    &__input-container {
+        display: flex;
+        width: 100%;
+        margin: 10px 0;
+        flex-direction: column;
+        &--row {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__label {
+        margin-bottom: 10px;
+    }
+    &__input {
+        border: 1px solid #f1f1f1;
+        padding: 10px;
+    }
+    &__btn {
+        width: 100%;
+        background-color: $primary;
+        color: #fff;
+        border: 0;
+        padding: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+    &__checkbox {
+        margin: 0 10px;
+        width: 15px;
+        height: 15px;
+    }
+}

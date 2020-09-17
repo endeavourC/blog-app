@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontpageController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,5 @@ use App\Http\Controllers\FrontpageController;
 */
 
 Route::get('/', [FrontpageController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'index']);

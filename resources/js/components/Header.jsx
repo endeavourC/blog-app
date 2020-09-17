@@ -16,7 +16,7 @@ const Header = () => {
                         className="header__link header__link--btn"
                         href="/login"
                     >
-                        Login
+                        Account
                     </InertiaLink>
                 </nav>
             </div>

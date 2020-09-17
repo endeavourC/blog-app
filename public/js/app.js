@@ -48476,23 +48476,27 @@ module.exports = function(module) {
 var map = {
 	"./Frontpage": [
 		"./resources/js/Pages/Frontpage.jsx",
-		9,
 		0
 	],
 	"./Frontpage.jsx": [
 		"./resources/js/Pages/Frontpage.jsx",
-		9,
 		0
 	],
 	"./Layout": [
 		"./resources/js/Pages/Layout.jsx",
-		7,
 		1
 	],
 	"./Layout.jsx": [
 		"./resources/js/Pages/Layout.jsx",
-		7,
 		1
+	],
+	"./Login": [
+		"./resources/js/Pages/Login.jsx",
+		2
+	],
+	"./Login.jsx": [
+		"./resources/js/Pages/Login.jsx",
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -48505,8 +48509,8 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[2]).then(function() {
-		return __webpack_require__.t(id, ids[1])
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(id);
 	});
 }
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {

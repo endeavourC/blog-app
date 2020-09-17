@@ -1,0 +1,10 @@
+.headline {
+    font-size: 2rem;
+    font-weight: 300;
+    color: $secondary;
+}
+
+.lead {
+    line-height: 22px;
+    color: lighten(#000, 50%);
+}

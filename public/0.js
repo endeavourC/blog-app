@@ -94,7 +94,7 @@ var Header = function Header() {
   }, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: "header__link header__link--btn",
     href: "/login"
-  }, "Login"))));
+  }, "Account"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
