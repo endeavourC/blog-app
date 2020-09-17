@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
 /***/ "./resources/js/Pages/Layout.jsx":
 /*!***************************************!*\
@@ -30,10 +30,10 @@ var Layout = function Layout(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Login.jsx":
-/*!**************************************!*\
-  !*** ./resources/js/Pages/Login.jsx ***!
-  \**************************************/
+/***/ "./resources/js/Pages/Register.jsx":
+/*!*****************************************!*\
+  !*** ./resources/js/Pages/Register.jsx ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42,7 +42,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Layout.jsx");
-/* harmony import */ var _components_LoginForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/LoginForm */ "./resources/js/components/LoginForm.jsx");
+/* harmony import */ var _components_RegisterForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/RegisterForm */ "./resources/js/components/RegisterForm.jsx");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -50,23 +50,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Login = function Login() {
+var Register = function Register() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Blog App - Login"
+    title: "Blog App - Register"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container container--center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "headline"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["InertiaLink"], {
-    className: "switcher switcher--active",
+    className: "switcher ",
     href: "/login"
   }, "Login"), "/", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__["InertiaLink"], {
-    className: "switcher",
+    className: "switcher switcher--active",
     href: "/register"
-  }, "Register")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_LoginForm__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+  }, "Register")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_RegisterForm__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Login);
+/* harmony default export */ __webpack_exports__["default"] = (Register);
 
 /***/ }),
 
@@ -111,10 +111,10 @@ var Header = function Header() {
 
 /***/ }),
 
-/***/ "./resources/js/components/LoginForm.jsx":
-/*!***********************************************!*\
-  !*** ./resources/js/components/LoginForm.jsx ***!
-  \***********************************************/
+/***/ "./resources/js/components/RegisterForm.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/components/RegisterForm.jsx ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -142,11 +142,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var LoginForm = function LoginForm() {
+var RegisterForm = function RegisterForm() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     email: "",
     password: "",
-    remember: false
+    confirmpassword: "",
+    name: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -164,6 +165,17 @@ var LoginForm = function LoginForm() {
     className: "form",
     action: ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form__input-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "name",
+    className: "form__label"
+  }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    id: "name",
+    value: values.name,
+    className: "form__input",
+    onChange: handleChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form__input-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "email",
@@ -186,23 +198,24 @@ var LoginForm = function LoginForm() {
     value: values.password,
     onChange: handleChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form__input-container form__input-container--row"
+    className: "form__input-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "remember"
-  }, "Remember Me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "checkbox",
-    className: "form__checkbox",
-    id: "remember",
-    value: values.remember,
+    htmlFor: "password",
+    className: "form__label"
+  }, "Confirm Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "password",
+    id: "confirmpassword",
+    className: "form__input",
+    value: values.confirmpassword,
     onChange: handleChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form__input-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "form__btn"
-  }, "Log in")));
+  }, "Register")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (LoginForm);
+/* harmony default export */ __webpack_exports__["default"] = (RegisterForm);
 
 /***/ })
 

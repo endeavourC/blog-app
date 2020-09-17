@@ -3,6 +3,7 @@
     color: $secondary;
     transition: 0.3s;
     border-bottom: 1px solid none;
+    text-decoration: none;
     &--active {
         color: $primary;
         border-bottom: 1px solid $primary;

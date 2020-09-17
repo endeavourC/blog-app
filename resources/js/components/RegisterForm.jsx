@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-const Login = () => {
+const RegisterForm = () => {
     const [values, setValues] = useState({
         email: "",
         password: "",
+        confirmpassword: "",
         name: ""
     });
 
@@ -55,6 +56,18 @@ const Login = () => {
                     onChange={handleChange}
                 />
             </div>
+            <div className="form__input-container">
+                <label htmlFor="password" className="form__label">
+                    Confirm Password
+                </label>
+                <input
+                    type="password"
+                    id="confirmpassword"
+                    className="form__input"
+                    value={values.confirmpassword}
+                    onChange={handleChange}
+                />
+            </div>
 
             <div className="form__input-container">
                 <button className="form__btn">Register</button>
@@ -63,4 +76,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default RegisterForm;

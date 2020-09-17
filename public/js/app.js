@@ -48497,6 +48497,14 @@ var map = {
 	"./Login.jsx": [
 		"./resources/js/Pages/Login.jsx",
 		2
+	],
+	"./Register": [
+		"./resources/js/Pages/Register.jsx",
+		3
+	],
+	"./Register.jsx": [
+		"./resources/js/Pages/Register.jsx",
+		3
 	]
 };
 function webpackAsyncContext(req) {

@@ -511,6 +511,7 @@ html {
   color: #1f2041;
   transition: 0.3s;
   border-bottom: 1px solid none;
+  text-decoration: none;
 }
 
 .switcher--active {
