@@ -1,0 +1,34 @@
+.header {
+    padding: 15px;
+    border: 1px solid #f1f1f1;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        font-size: 2rem;
+        color: $secondary;
+    }
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include query(md) {
+            flex-direction: row;
+        }
+    }
+    &__link {
+        color: $primary;
+        padding: 15px;
+        text-decoration: none;
+        &--btn {
+            background: $primary;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}
