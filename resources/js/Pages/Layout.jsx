@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import { showAlert } from "../helpers/alert";
 import { usePage } from "@inertiajs/inertia-react";
-
+import { toast } from "react-toastify";
 const Layout = ({ title, children }) => {
     const { flash } = usePage();
 
@@ -10,14 +9,13 @@ const Layout = ({ title, children }) => {
         document.title = title;
     }
 
+    if (flash.message) {
+        toast.success(flash.message);
+    }
+
     return (
         <>
             <Header />
-            {flash.message && (
-                <div className="container container--center">
-                    {showAlert(flash, "success")}
-                </div>
-            )}
             <main>{children}</main>
         </>
     );
