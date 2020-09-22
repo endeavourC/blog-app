@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Layout from "./Layout";
 import RegisterForm from "../components/RegisterForm";
 import { InertiaLink } from "@inertiajs/inertia-react";
-
-const Register = () => {
+import { showAlert } from "../helpers/alert";
+const Register = ({ errors }) => {
+    console.log(errors);
     return (
         <Layout title="Blog App - Register">
             <div className="container container--center">
+                {showAlert(errors, "error")}
                 <h2 className="headline">
                     <InertiaLink className="switcher " href="/login">
                         Login

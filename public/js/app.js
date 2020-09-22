@@ -48476,35 +48476,35 @@ module.exports = function(module) {
 var map = {
 	"./Frontpage": [
 		"./resources/js/Pages/Frontpage.jsx",
-		0
+		1
 	],
 	"./Frontpage.jsx": [
 		"./resources/js/Pages/Frontpage.jsx",
-		0
+		1
 	],
 	"./Layout": [
 		"./resources/js/Pages/Layout.jsx",
-		1
+		3
 	],
 	"./Layout.jsx": [
 		"./resources/js/Pages/Layout.jsx",
-		1
+		3
 	],
 	"./Login": [
 		"./resources/js/Pages/Login.jsx",
-		2
+		0
 	],
 	"./Login.jsx": [
 		"./resources/js/Pages/Login.jsx",
-		2
+		0
 	],
 	"./Register": [
 		"./resources/js/Pages/Register.jsx",
-		3
+		2
 	],
 	"./Register.jsx": [
 		"./resources/js/Pages/Register.jsx",
-		3
+		2
 	]
 };
 function webpackAsyncContext(req) {

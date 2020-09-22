@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Inertia } from "@inertiajs/inertia";
+
 const RegisterForm = () => {
     const [values, setValues] = useState({
         email: "",
         password: "",
-        confirmpassword: "",
+        password_confirmation: "",
         name: ""
     });
 
@@ -17,6 +19,11 @@ const RegisterForm = () => {
                 [currentField]: value
             };
         });
+    };
+
+    const handleSubmit = ev => {
+        ev.preventDefault();
+        Inertia.post("/register", values);
     };
     return (
         <form className="form" action="">
@@ -62,15 +69,17 @@ const RegisterForm = () => {
                 </label>
                 <input
                     type="password"
-                    id="confirmpassword"
+                    id="password_confirmation"
                     className="form__input"
-                    value={values.confirmpassword}
+                    value={values.password_confirmation}
                     onChange={handleChange}
                 />
             </div>
 
             <div className="form__input-container">
-                <button className="form__btn">Register</button>
+                <button onClick={handleSubmit} className="form__btn">
+                    Register
+                </button>
             </div>
         </form>
     );

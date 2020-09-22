@@ -13,7 +13,7 @@ class StoreRegister extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class StoreRegister extends FormRequest
         return [
             'name'  => 'required|string|unique:users',
             'email' => 'required|email|unique:users',
-            'password' => 'required|password|confirmed'
+            'password' => 'required|confirmed|min:8'
         ];
     }
 }

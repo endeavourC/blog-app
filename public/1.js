@@ -1,5 +1,35 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
+/***/ "./resources/js/Pages/Frontpage.jsx":
+/*!******************************************!*\
+  !*** ./resources/js/Pages/Frontpage.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Layout.jsx");
+/* harmony import */ var _components_HeroPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HeroPosts */ "./resources/js/components/HeroPosts.jsx");
+
+
+
+
+var Frontpage = function Frontpage(_ref) {
+  var posts = _ref.posts;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Blog App - Home Page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HeroPosts__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    posts: posts
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Frontpage);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Layout.jsx":
 /*!***************************************!*\
   !*** ./resources/js/Pages/Layout.jsx ***!
@@ -68,6 +98,30 @@ var Header = function Header() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/components/HeroPosts.jsx":
+/*!***********************************************!*\
+  !*** ./resources/js/components/HeroPosts.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var HeroPosts = function HeroPosts(_ref) {
+  var posts = _ref.posts;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "container hero"
+  }, "posts");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HeroPosts);
 
 /***/ })
 
