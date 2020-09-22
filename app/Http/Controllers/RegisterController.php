@@ -7,6 +7,8 @@ use Inertia\Inertia;
 use App\Http\Requests\StoreRegister;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Session;
 
 class RegisterController extends Controller
 {
@@ -28,5 +30,11 @@ class RegisterController extends Controller
              'password' => Hash::make($validated['password'])
        ]);
 
+
+            Auth::login($user);
+
+            Session::flash('message', 'Your account has been created successfully');
+            
+            return redirect('/');
       }
 }

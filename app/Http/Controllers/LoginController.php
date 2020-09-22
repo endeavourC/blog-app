@@ -5,6 +5,8 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
 // use Illuminate\Http\Request;
 use App\Http\Requests\StoreLogin;
+use Session;
+
 class LoginController extends Controller
 {
 
@@ -20,6 +22,8 @@ class LoginController extends Controller
    public function logout() {
       Auth::logout();
 
+      Session::flash('message', 'You logout successfully');
+
       return redirect('login');
    }
 
@@ -30,7 +34,9 @@ class LoginController extends Controller
 
       if( Auth::attempt($validated) ) {
          
-         return redirect('/')->with('message', 'You logged in successfully');
+         Session::flash('message', 'You logged in successfully');
+
+         return redirect('/');
 
       } 
 
