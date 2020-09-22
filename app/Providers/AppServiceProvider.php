@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
 use Session;
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,5 +31,16 @@ class AppServiceProvider extends ServiceProvider
                 'message' => Session::get('message'),
             ];
         });
+
+        Inertia::share([
+            'auth'  =>  function(){
+                return [
+                    'user'  => Auth::user() ? [
+                        'id'    => Auth::user()->id,
+                        'nickname'  => Auth::user()->name
+                    ] : null
+                ];
+            }
+        ]);
     }
 }

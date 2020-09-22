@@ -1,6 +1,9 @@
 import React from "react";
-import { InertiaLink } from "@inertiajs/inertia-react";
+import { InertiaLink, usePage } from "@inertiajs/inertia-react";
+
 const Header = () => {
+    const { auth } = usePage();
+    console.log(auth);
     return (
         <header className="header">
             <div className="container header__container">
@@ -12,12 +15,21 @@ const Header = () => {
                     <InertiaLink className="header__link" href="/blog">
                         Blog
                     </InertiaLink>
-                    <InertiaLink
-                        className="header__link header__link--btn"
-                        href="/login"
-                    >
-                        Login
-                    </InertiaLink>
+                    {auth.user === null ? (
+                        <InertiaLink
+                            className="header__link header__link--btn"
+                            href="/login"
+                        >
+                            Login
+                        </InertiaLink>
+                    ) : (
+                        <InertiaLink
+                            className="header__link header__link--btn"
+                            href="/logout"
+                        >
+                            Logout
+                        </InertiaLink>
+                    )}
                 </nav>
             </div>
         </header>
